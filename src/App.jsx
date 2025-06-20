@@ -3,6 +3,7 @@ import Navbar from "./Components/Navbar";
 import ThemeToggle from "./Components/ThemeToggle";
 import HeroSection from "./Components/HeroSection";
 import AboutMe from "./Components/AboutMe";
+import Skills from "./Components/Skills";
 const App = () => {
   return (
     <div className="overflow-x-hidden text-neutral-300 ">
@@ -11,6 +12,7 @@ const App = () => {
       <main>
       <HeroSection/>
       <AboutMe/>
+      <Skills/>
       </main>
     </div>
   );
