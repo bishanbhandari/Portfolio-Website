@@ -106,7 +106,7 @@
 }
 
 @utility card-hover{
-    @apply transition-transform duration-400 hover:scale-[1.1] hover:shadow-lg;
+    @apply transition-transform duration-400 hover:scale-[1.15] hover:shadow-lg;
     text-shadow:0 0 10px rgba(167,139,250,0.5)
 }
 
