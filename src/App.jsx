@@ -4,6 +4,9 @@ import ThemeToggle from "./Components/ThemeToggle";
 import HeroSection from "./Components/HeroSection";
 import AboutMe from "./Components/AboutMe";
 import Skills from "./Components/Skills";
+import Project from "./Project";
+
+
 const App = () => {
   return (
     <div className="overflow-x-hidden text-neutral-300 ">
@@ -13,6 +16,7 @@ const App = () => {
       <HeroSection/>
       <AboutMe/>
       <Skills/>
+      <Project/>
       </main>
     </div>
   );
