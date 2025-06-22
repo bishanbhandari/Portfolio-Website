@@ -56,7 +56,7 @@ const AboutMe = () => {
 
             <div className="gardient-border p-6 card-hover ">
               <div className="flex items-start gap-4">
-                <div className="p-3 rounded-full bg-indigo-700/20">
+                <div className="p-3 rounded-full bg-indigo-800/20">
                   <FaRegUserCircle />
                 </div>
                 <div className="text-left">
@@ -71,7 +71,7 @@ const AboutMe = () => {
 
             <div className="gardient-border p-6 card-hover">
               <div className="flex items-start gap-4">
-                <div className="p-3 rounded-full bg-purple-700/20">
+                <div className="p-3 rounded-full bg-purple-800/20">
                   <FaBriefcase />
                 </div>
                 <div className="text-left">

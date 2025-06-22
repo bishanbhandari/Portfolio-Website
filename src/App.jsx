@@ -4,8 +4,8 @@ import ThemeToggle from "./Components/ThemeToggle";
 import HeroSection from "./Components/HeroSection";
 import AboutMe from "./Components/AboutMe";
 import Skills from "./Components/Skills";
-import Project from "./Project";
-
+import Project from "./Components/Project";
+import Contact from "./Components/Contact";
 
 const App = () => {
   return (
@@ -17,6 +17,7 @@ const App = () => {
       <AboutMe/>
       <Skills/>
       <Project/>
+      <Contact/>
       </main>
     </div>
   );
