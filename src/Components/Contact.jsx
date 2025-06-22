@@ -6,8 +6,37 @@ import { FaInstagram } from "react-icons/fa";
 import { IoIosMail } from "react-icons/io";
 import { FaPhoneAlt } from "react-icons/fa";
 import { FaLocationDot } from "react-icons/fa6";
+import { IoSend } from "react-icons/io5";
 
 const Contact = () => {
+
+    const [result, setResult] = React.useState("");
+
+    const onSubmit = async (event) => {
+      event.preventDefault();
+      setResult("Sending....");
+      const formData = new FormData(event.target);
+  
+      formData.append("access_key", "71d6cec8-a3df-483c-912b-cdd3b2ae5477");
+  
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData
+      });
+  
+      const data = await response.json();
+  
+      if (data.success) {
+        setResult("Form Submitted Successfully");
+        event.target.reset();
+      } else {
+        console.log("Error", data);
+        setResult(data.message);
+      }
+    };
+
+
+
   return (
     <section id="contact" className="py-24 px-4 relative bg-secondary/30">
       <div className="container mx-auto max-w-5xl">
@@ -90,7 +119,7 @@ const Contact = () => {
 
                 <div className="rounded-lg shadow-x5  bg-violet-1000/50">
                     <h3 className="text-2xl font-semibold mb-6">Send a Message</h3>
-                    <form className="space-y-6">
+                    <form onSubmit={onSubmit} className="space-y-6">
                             <div className='flex flex-col items-start mb-4'>
                                 <label htmlFor="name" className="text-left ">Your Name</label>
                                 <input type="text" id="name" name="name" required
@@ -113,7 +142,10 @@ const Contact = () => {
                                 placeholder="Hello, I'd like to talk about ........." rows="5" 
                                 />
                             </div>
+                            <button type="submit" className="cosmic-button flex items-center gap-1">Send Message<span><IoSend /></span></button>
                     </form>
+                    <br />
+                    <span className="text-left font-bold">{result}</span>
                 </div>
 
         </div>
