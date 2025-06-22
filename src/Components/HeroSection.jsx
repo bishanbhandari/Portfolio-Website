@@ -1,5 +1,6 @@
 import React from "react";
 import { FaRegArrowAltCircleDown } from "react-icons/fa";
+
 const HeroSection = () => {
   return (
     <section
