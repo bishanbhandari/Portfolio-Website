@@ -64,7 +64,7 @@ const Navbar = () => {
 
         <div
           className={cn(
-            "fixed inset-0 backdrop-blur-md z-40 flex flex-col items-center justify-center",
+            "fixed inset-0 w-full h-screen font-extrabold text-lg  bg-black/80 backdrop-blur-md z-40 flex flex-col items-center justify-center",
             "transition-all duration-300 md:hidden",
             isMenuOpen
               ? "opacity-100 pointer-events-auto"
